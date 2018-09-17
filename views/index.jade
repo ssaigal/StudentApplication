@@ -1,0 +1,64 @@
+extends layout
+
+block content
+  h1= title
+  p 
+
+  // Wrapper
+  #wrapper
+  
+    // USER INFO
+    #userInfo
+      h2 Student Info
+      p
+        strong Name:
+        |  <span id='userInfoName'></span>
+        br
+        strong Email:
+        |  <span id='userInfoEmail'></span>
+        br
+        strong Address:
+        |  <span id='userInfoAddress'></span>
+        br
+        strong GPA:
+        |  <span id='userInfoGpa'></span>
+    // /USER INFO
+    // SEARCH USER
+    #searchUser
+      fieldset
+        input#inputSearchKey(type='text', size="43" placeholder='Name')
+        &nbsp;&nbsp;&nbsp
+        button#btnSearchUser Search Student
+        br
+        br
+    // /SEARCH USER
+
+    // USER LIST
+    h2 Student List
+    #userList
+      table
+        thead
+          th Student_Id
+          th First_Name
+          th Last_Name
+          th Delete?
+        tbody
+    // /USER LIST
+    // ADD USER
+    h2 Add Student
+    #addUser
+      fieldset
+        input#inputUserId(type='text', placeholder='Student Id')
+        input#inputUserEmail(type='text', placeholder='Email')
+        br
+        input#inputUserFirstname(type='text', placeholder='First Name')
+        input#inputUserLastname(type='text', placeholder='Last Name')
+        br
+        input#inputUserAddress(type='text', placeholder='Address')
+        input#inputUserGpa(type='text', placeholder='GPA')
+        br
+        br
+        button#btnAddUser Add Student
+    // /ADD USER
+
+  // /WRAPPER
